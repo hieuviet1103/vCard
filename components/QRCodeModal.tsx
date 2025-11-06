@@ -35,7 +35,7 @@ const QRCodeModal: React.FC<QRCodeModalProps> = ({ value, label, onClose }) => {
       onClick={onClose}
     >
       <div
-        className="bg-[--bg-primary] rounded-2xl shadow-xl p-8 text-center max-w-sm w-full transform transition-all animate-fade-in-up"
+        className="bg-[#f5deb3] rounded-2xl shadow-xl p-8 text-center max-w-sm w-full transform transition-all animate-fade-in-up"
         onClick={(e) => e.stopPropagation()}
       >
         <h3 className="text-lg font-bold text-[--text-primary] mb-1">{label}</h3>
