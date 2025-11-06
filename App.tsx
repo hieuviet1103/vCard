@@ -10,7 +10,7 @@ const initialProfileData: Profile = {
   title: 'Data Engineer',
   company: 'Vietravel Coporation',
   avatarUrl: 'https://avatars.githubusercontent.com/u/68463316',
-  bio: 'Passionate about creating beautiful, intuitive, and high-performance web experiences. Specializing in React, TypeScript, and modern UI/UX design principles.',
+  bio: 'I am a Data Engineer at Vietravel Corporation. I am responsible for building and maintaining the data infrastructure and platform for the company.',
   contact: {
     phone: '+84 (355) 234-544',
     email: 'hieunv.itc@vietravel.com',
@@ -57,7 +57,7 @@ const App: React.FC = () => {
   return (
     <LocalizationProvider value={{ locale }}>
       <div className={themeClass}>
-        <div className="min-h-screen bg-gray-100 dark:bg-gray-900 flex items-center justify-center p-4 font-sans">
+        <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4 font-sans">
           <div className="w-full max-w-md">
             <VCard profile={profile} onShowQrCode={showQrCode} />
           </div>
