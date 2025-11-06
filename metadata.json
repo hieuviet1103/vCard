@@ -1,0 +1,5 @@
+{
+  "name": "Interactive VCard Generator",
+  "description": "A professional and friendly digital business card application. It displays personal and contact information, and generates unique QR codes for each piece of data, as well as a master QR code to save the contact directly.",
+  "requestFramePermissions": []
+}
