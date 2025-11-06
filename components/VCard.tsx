@@ -129,13 +129,17 @@ const VCard: React.FC<VCardProps> = ({ profile, onShowQrCode }) => {
             href={profile.contact.website}
             onQrClick={() => onShowQrCode(profile.contact.website, t('website'))}
           />
+          {profile.contact.linkedin && (
            <InfoRow 
+           
             icon={<LinkedInIcon />} 
             label="LinkedIn" 
             value={profile.contact.linkedin} 
             href={`https://${profile.contact.linkedin}`}
             onQrClick={() => onShowQrCode(`https://${profile.contact.linkedin}`, 'LinkedIn Profile')}
           />
+          )}
+          {profile.contact.github && (
            <InfoRow 
             icon={<GitHubIcon />} 
             label="GitHub" 
@@ -143,6 +147,8 @@ const VCard: React.FC<VCardProps> = ({ profile, onShowQrCode }) => {
             href={`https://${profile.contact.github}`}
             onQrClick={() => onShowQrCode(`https://${profile.contact.github}`, 'GitHub Profile')}
           />
+          )}
+          {profile.contact.twitter && (
           <InfoRow 
             icon={<TwitterIcon />} 
             label="Twitter" 
@@ -150,6 +156,8 @@ const VCard: React.FC<VCardProps> = ({ profile, onShowQrCode }) => {
             href={`https://${profile.contact.twitter}`}
             onQrClick={() => onShowQrCode(`https://${profile.contact.twitter}`, 'Twitter Profile')}
           />
+          )}
+          {profile.contact.instagram && (
           <InfoRow 
             icon={<InstagramIcon />} 
             label="Instagram" 
@@ -157,6 +165,7 @@ const VCard: React.FC<VCardProps> = ({ profile, onShowQrCode }) => {
             href={`https://${profile.contact.instagram}`}
             onQrClick={() => onShowQrCode(`https://${profile.contact.instagram}`, 'Instagram Profile')}
           />
+          )}
           <InfoRow 
             icon={<LocationIcon />} 
             label={t('address')}
@@ -165,15 +174,16 @@ const VCard: React.FC<VCardProps> = ({ profile, onShowQrCode }) => {
             onQrClick={() => onShowQrCode(`geo:${profile.coordinates.lat},${profile.coordinates.lng}?q=${encodeURIComponent(fullAddress)}`, t('address'))}
           />
         </div>
-
-        <div className="mt-6 rounded-lg overflow-hidden shadow-md">
+        {profile.coordinates.lat && profile.coordinates.lng && (    
+          <div className="mt-6 rounded-lg overflow-hidden shadow-md">
             <Map coordinates={profile.coordinates} address={fullAddress} />
-        </div>
+          </div>
+        )}
         
         <div className="mt-8 flex flex-col sm:flex-row items-center gap-3">
           <button 
             onClick={handleDownloadVCard}
-            className="w-full bg-[--accent-color] text-white font-bold py-3 px-4 rounded-lg hover:bg-[--accent-hover] focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800 transition-all flex items-center justify-center space-x-2"
+            className="w-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 font-bold py-3 px-4 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[--accent-color] dark:focus:ring-offset-gray-800 transition-colors flex items-center justify-center space-x-2"
           >
             <DownloadIcon className="w-5 h-5" />
             <span>{t('addToContacts')}</span>

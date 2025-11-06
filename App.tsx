@@ -6,30 +6,28 @@ import type { Profile } from './types';
 
 // Mock data for the VCard, now including coordinates
 const initialProfileData: Profile = {
-  name: 'Alex Doe',
-  title: 'Senior Frontend Engineer',
-  company: 'Gemini Solutions',
-  avatarUrl: 'https://picsum.photos/200',
+  name: 'Nguyễn Việt Hiếu',
+  title: 'Data Engineer',
+  company: 'Vietravel Coporation',
+  avatarUrl: 'https://avatars.githubusercontent.com/u/68463316',
   bio: 'Passionate about creating beautiful, intuitive, and high-performance web experiences. Specializing in React, TypeScript, and modern UI/UX design principles.',
   contact: {
-    phone: '+1 (555) 123-4567',
-    email: 'alex.doe@gemini.com',
-    website: 'https://alexdoe.dev',
-    linkedin: 'linkedin.com/in/alexdoe',
-    github: 'github.com/alexdoe',
-    instagram: 'instagram.com/alexdoe',
-    twitter: 'twitter.com/alexdoe',
+    phone: '+84 (355) 234-544',
+    email: 'hieunv.itc@vietravel.com',
+    website: 'https://travel.com.vn',
+    linkedin: 'https://www.linkedin.com/in/hieunguyenitc/',
+    github: 'https://github.com/hieuviet1103',
   },
   address: {
-    street: '1600 Amphitheatre Parkway',
-    city: 'Mountain View',
-    state: 'CA',
-    zip: '94043',
-    country: 'USA',
+    street: '190 Pasteur Street',
+    city: 'Ho Chi Minh City',
+    state: 'Ho Chi Minh City',
+    zip: '70000',
+    country: 'Vietnam',
   },
   coordinates: {
-    lat: 37.422,
-    lng: -122.084,
+    lat: 10.7769,
+    lng: 106.7006,
   },
 };
 

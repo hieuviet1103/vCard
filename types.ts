@@ -7,11 +7,11 @@ export interface Profile {
   contact: {
     phone: string;
     email: string;
-    website: string;
-    linkedin: string;
-    github: string;
-    instagram: string;
-    twitter: string;
+    website?: string;
+    linkedin?: string;
+    github?: string;
+    instagram?: string;
+    twitter?: string;
   };
   address: {
     street: string;
